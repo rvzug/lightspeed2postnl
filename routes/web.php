@@ -17,3 +17,7 @@ Route::get('/', function () {
     $api = new ShopApi();
     return $api->shop()->get();
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
